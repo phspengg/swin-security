@@ -2,28 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/critical.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm System | Swin Security</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore premium alarm systems from Ajax, DSC, Paradox, Bosch, and Risco at Swin Security. Advanced protection for homes and businesses.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alarm System | Swin Security" />
+    <meta property="og:description" content="Discover reliable and modern alarm systems from leading brands like Ajax and Paradox. Protect your home or business with Swin Security." />
+    <meta property="og:image" content="https://yoursite.com/images/alarmsystem-cover.jpg" />
+    <meta property="og:url" content="https://yoursite.com/pages/alarmsystem.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alarm System | Swin Security" />
+    <meta name="twitter:description" content="Smart and scalable alarm systems by top brands. Ensure your security with Swin Security." />
+    <meta name="twitter:image" content="https://yoursite.com/images/alarmsystem-cover.jpg" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/critical.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="logo">
-            <img src="../images/Swin_security.webp" alt="Swin Security" height="60">
+            <img src="../images/Swin_security.webp" alt="Swin Security logo" height="60" loading="lazy" />
         </div>
 
         <ul class="nav-links">
             <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="./about.html"><i class="fas fa-users"></i> About Us</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle"><i class="fas fa-cogs"></i>Our Solutions <i
-                        class="fas fa-chevron-down"></i></a>
+                <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cogs"></i> Our Solutions <i class="fas fa-chevron-down"></i>
+                </a>
                 <ul class="dropdown-menu">
                     <li><a href="./gateautomation.html"><i class="fa-solid fa-window-maximize"></i> Gate Automation</a></li>
                     <li><a href="./alarmsystem.html"><i class="fas fa-bell"></i> Alarm System</a></li>
@@ -35,8 +52,9 @@
             <li><a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
 
-        <i class="fas fa-bars hamburger"></i>
+        <i class="fas fa-bars hamburger" aria-label="Open Menu"></i>
     </nav>
+
     <!-- Existing Hero Section -->
     <section class="alarmsystem-page-hero">
         <div class="alarmsystem-page-hero-text">
@@ -52,59 +70,60 @@
 
     <!-- New Section with Trusted Alarm System Brands Heading -->
     <h2 class="alarmsystem-page-trusted-brands-heading">Trusted Alarm System Brands</h2>
-<section class="alarmsystem-page-info">
-    <div class="alarmsystem-page-info-item">
-        <div class="alarmsystem-page-info-text">
-            <h2>Ajax Alarm Systems</h2>
-            <p>Ajax offers cutting-edge wireless alarm systems with sleek designs and powerful features. It includes real-time mobile app notifications, motion detectors, and door sensors, making it ideal for modern residential and commercial spaces.</p>
-        </div>
-        <div class="alarmsystem-page-info-image">
-            <img src="../images/AJAX alarm.jpg" alt="Ajax Alarm System">
-        </div>
-    </div>
 
-    <div class="alarmsystem-page-info-item">
-        <div class="alarmsystem-page-info-text">
-            <h2>DSC Alarm Systems</h2>
-            <p>DSC (Digital Security Controls) is known for reliable, scalable wired and wireless security systems. Perfect for homes and offices, DSC panels are compatible with automation and monitoring platforms for complete protection.</p>
+    <section class="alarmsystem-page-info">
+        <div class="alarmsystem-page-info-item">
+            <div class="alarmsystem-page-info-text">
+                <h2>Ajax Alarm Systems</h2>
+                <p>Ajax offers cutting-edge wireless alarm systems with sleek designs and powerful features. It includes real-time mobile app notifications, motion detectors, and door sensors, making it ideal for modern residential and commercial spaces.</p>
+            </div>
+            <div class="alarmsystem-page-info-image">
+                <img src="../images/AJAX alarm.jpg" alt="Ajax Alarm System with sensors" loading="lazy" />
+            </div>
         </div>
-        <div class="alarmsystem-page-info-image">
-            <img src="../images/DSC alarm.jpg" alt="DSC Alarm System">
-        </div>
-    </div>
 
-    <div class="alarmsystem-page-info-item">
-        <div class="alarmsystem-page-info-text">
-            <h2>Paradox Alarm Systems</h2>
-            <p>Paradox offers flexible alarm solutions with hybrid wired/wireless options. Their MG and SP series are suitable for both residential and commercial installations, with mobile app integration and customizable expansion modules.</p>
+        <div class="alarmsystem-page-info-item">
+            <div class="alarmsystem-page-info-text">
+                <h2>DSC Alarm Systems</h2>
+                <p>DSC (Digital Security Controls) is known for reliable, scalable wired and wireless security systems. Perfect for homes and offices, DSC panels are compatible with automation and monitoring platforms for complete protection.</p>
+            </div>
+            <div class="alarmsystem-page-info-image">
+                <img src="../images/DSC alarm.jpg" alt="DSC Alarm System hardware" loading="lazy" />
+            </div>
         </div>
-        <div class="alarmsystem-page-info-image">
-            <img src="../images/PARADOX ALarm.jpg" alt="Paradox Alarm System">
-        </div>
-    </div>
 
-    <div class="alarmsystem-page-info-item">
-        <div class="alarmsystem-page-info-text">
-            <h2>Bosch & Risco Alarm Systems</h2>
-            <p>Bosch 2000/3000 series and Risco systems are trusted in high-security environments. These solutions support advanced automation, remote monitoring, and robust alarm management—ideal for commercial sites and large-scale facilities.</p>
+        <div class="alarmsystem-page-info-item">
+            <div class="alarmsystem-page-info-text">
+                <h2>Paradox Alarm Systems</h2>
+                <p>Paradox offers flexible alarm solutions with hybrid wired/wireless options. Their MG and SP series are suitable for both residential and commercial installations, with mobile app integration and customizable expansion modules.</p>
+            </div>
+            <div class="alarmsystem-page-info-image">
+                <img src="../images/PARADOX ALarm.jpg" alt="Paradox Alarm System panel" loading="lazy" />
+            </div>
         </div>
-        <div class="alarmsystem-page-info-image">
-            <img src="../images/RISCO alarm.jpg" alt="Bosch Risco Alarm System">
+
+        <div class="alarmsystem-page-info-item">
+            <div class="alarmsystem-page-info-text">
+                <h2>Bosch & Risco Alarm Systems</h2>
+                <p>Bosch 2000/3000 series and Risco systems are trusted in high-security environments. These solutions support advanced automation, remote monitoring, and robust alarm management—ideal for commercial sites and large-scale facilities.</p>
+            </div>
+            <div class="alarmsystem-page-info-image">
+                <img src="../images/RISCO alarm.jpg" alt="Bosch and Risco Alarm Systems in commercial environment" loading="lazy" />
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-    <footer class="footer-section">
+    <footer class="footer-section" role="contentinfo">
         <div class="footer-container">
             <!-- Company Info -->
             <div class="footer-column">
                 <h3>Swin Security</h3>
                 <p>Protecting your world with cutting-edge security solutions.</p>
-                <p>Email: info@swinsecurity.com</p>
-                <p>Phone: +1 (800) 123-4567</p>
+                <p>Email: <a href="mailto:info@swinsecurity.com">info@swinsecurity.com</a></p>
+                <p>Phone: <a href="tel:+18001234567">+1 (800) 123-4567</a></p>
                 <p>Address: 123 Secure St, Safety City, SC 12345</p>
             </div>
+
             <!-- Quick Links -->
             <div class="footer-column">
                 <h3>Quick Links</h3>
@@ -116,17 +135,19 @@
                     <li><a href="../pages/contact.html">Contact Us</a></li>
                 </ul>
             </div>
+
             <!-- Social Media -->
             <div class="footer-column">
                 <h3>Follow Us</h3>
                 <div class="footer-social">
-                    <a href="https://twitter.com" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://facebook.com" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" title="Follow us on Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" title="Follow us on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com" title="Follow us on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="../js/main.js"></script>
 </body>
 

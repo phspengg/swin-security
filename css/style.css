@@ -58,7 +58,7 @@ body {
     object-fit: cover;
 }
 
-.header-video-fallback {
+/* .header-video-fallback {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,7 +67,7 @@ body {
     min-height: 100%;
     object-fit: cover;
     z-index: -1;
-}
+} */
 
 .header::after {
     content: '';
@@ -106,7 +106,8 @@ body {
     line-height: 1.6;
 }
 
-.header-content button {
+.header-content .cta-button-header {
+    text-decoration: none;
     background: var(--neon-green);
     color: var(--navy-blue);
     border: none;
@@ -119,8 +120,7 @@ body {
     box-shadow: 0 0 15px var(--neon-green);
 }
 
-.header-content button:hover {
-    transform: scale(1.05);
+.header-content .cta-button-header:hover {
     box-shadow: 0 0 25px var(--neon-green);
 }
 
@@ -141,27 +141,6 @@ body {
 .social-icons a:hover {
     color: var(--cyber-blue);
     transform: translateY(-5px);
-}
-
-/* Sample Content Section */
-.content {
-    padding: 2rem;
-    background: #f5f5f5;
-    position: relative;
-    z-index: 3;
-}
-
-.content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.content p {
-    font-size: 1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 /* Hero Stats */
@@ -1453,6 +1432,12 @@ body {
 }
 
 @media (max-width: 992px) {
+
+    /* Contact Hero Section */
+    .contact-page-hero-section {
+        background: none
+    }
+
     .contact-page-hero-container {
         flex-direction: column;
         text-align: center;
@@ -1651,7 +1636,7 @@ body {
     flex-wrap: wrap;
 }
 
-.alarmsystem-page-hero{
+.alarmsystem-page-hero {
     display: flex;
     justify-content: center;
     /* Centering the content horizontally */
@@ -1694,6 +1679,10 @@ body {
     /* Center the text */
     margin: 0 auto;
     /* Centers the text block horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .gateautomation-page-hero-text h1,
