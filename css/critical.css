@@ -298,6 +298,7 @@
     display: block !important;
     position: static !important;
     width: 100% !important;
+    padding: 0;
   }
   
   .dropdown.active .dropdown-menu {
