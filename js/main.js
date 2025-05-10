@@ -106,11 +106,11 @@ if (document.getElementById("access-control")) {
 }
 
 // Check if the solutions section exists
-if (document.querySelector(".our-solutions-section")) {
+if (document.querySelector(".our-services-section")) {
   // Wait for the page to load
   document.addEventListener("DOMContentLoaded", () => {
     // Select all solution cards to animate
-    const cards = document.querySelectorAll(".our-solutions-card");
+    const cards = document.querySelectorAll(".our-services-card");
 
     // Create Intersection Observer to watch for visibility
     const observer = new IntersectionObserver(

@@ -90,7 +90,8 @@ body {
     animation: fadeIn 1s ease-out;
 }
 
-.header-content h1 {
+.header-content h1,
+.header-content h1 span {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 3rem;
     font-weight: 700;
@@ -209,125 +210,118 @@ body {
     opacity: 0.9;
 }
 
-/* Our Solutions Section */
-.our-solutions-section {
+/* Our Services Section */
+.our-services-section {
     width: 100%;
     padding: 60px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-    background-color: var(--navy-blue);
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.our-solutions-container {
+.our-services-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.our-solutions-section h2 {
-    font-size: 36px;
-    color: var(--neon-green);
-    margin-bottom: 20px;
+.our-services-section h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-.our-solutions-section p {
+.our-services-section p {
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto 40px;
-    color: var(--text-light);
+    color: var(--navy-blue);
+
 }
 
-.our-solutions-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.our-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 cards per row */
+    gap: 30px;
+    margin: 0 auto;
 }
 
-.our-solutions-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border: 1px solid var(--cyber-blue);
+/* Cards */
+.our-services-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    min-height: 280px;
-    max-width: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 25px 20px;
+    min-height: 220px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.our-solutions-card.is-visible {
+.our-services-card.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.our-solutions-card i {
-    font-size: 40px;
-    margin: 0 auto 10px;
-    color: var(--cyber-blue);
-    transition: color 0.3s ease;
+.our-services-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 76, 109, 0.15);
 }
 
-.our-solutions-card h3 {
-    font-size: 24px;
-    color: var(--cyber-blue);
+.our-services-card h3 {
+    font-size: 20px;
+    color: #0077a6;
     margin-bottom: 10px;
 }
 
-.our-solutions-card p {
+.our-services-card p {
     font-size: 16px;
-    color: var(--text-light);
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.our-solutions-card .our-solutions-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--neon-green);
-    color: var(--navy-blue);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.our-solutions-card .our-solutions-button:hover {
-    background-color: var(--cyber-blue);
-    color: var(--text-light);
+    color: #555;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .our-solutions-section {
-        padding: 40px 15px;
+@media (max-width: 1024px) {
+    .our-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row on medium-sized screens */
     }
-    
-    .our-solutions-section h2 {
-        font-size: 28px;
-    }
-    
-    .our-solutions-section p {
-        font-size: 16px;
-    }
-    
-    .our-solutions-card {
-        height: auto;
-        min-height: 280px;
+
+    .our-services-card {
+        width: 90%;
+        /* Increase card width on medium-sized screens */
     }
 }
 
-@media (max-width: 480px) {
-    /* .our-solutions-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .our-services-section {
+        padding: 40px 15px;
     }
-     */
-    .our-solutions-card {
-        min-height: 250px;
+
+    .our-services-section h2 {
+        font-size: 30px;
+    }
+
+    .our-services-section p {
+        font-size: 16px;
+    }
+
+    .our-services-grid {
+        grid-template-columns: 1fr;
+        /* 1 card per row on mobile */
+    }
+
+    .our-services-card {
+        width: 100%;
+        /* Make cards take full width on mobile */
     }
 }
+
 /* Access Control Section */
 .access-control {
     padding: 8rem 2rem 4rem;
@@ -342,6 +336,7 @@ body {
 }
 
 .access-control h2 {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--navy-blue);
@@ -371,6 +366,8 @@ body {
 .access-control .intro.is-visible {
     opacity: 1;
     transform: translateY(0);
+    color: var(--navy-blue);
+
 }
 
 .features {
@@ -471,7 +468,7 @@ body {
 
 /* Why Choose Us Section */
 .why-choose-section {
-    width: 100%;    
+    width: 100%;
     padding: 80px 20px;
     text-align: center;
 }
@@ -482,16 +479,20 @@ body {
 }
 
 .why-choose-section h2 {
-    color: var(--navy-blue);
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .why-choose-section p {
-    font-size: 1.1rem;
+    font-size: 18px;
     max-width: 800px;
     margin: 0 auto 40px;
     color: var(--navy-blue);
+
 }
 
 .why-choose-us-grid {
@@ -513,7 +514,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
-    
+
 }
 
 .why-choose-us-card:hover {
@@ -572,9 +573,12 @@ body {
 }
 
 .partners-section h2 {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.5rem;
-    color: var(--neon-green);
-    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .partners-section p {
@@ -923,22 +927,34 @@ body {
 .products-section {
     padding: 60px 20px;
     text-align: center;
+    background-image:
+        linear-gradient(135deg, rgba(0, 255, 157, 0.700), rgba(0, 191, 255, 0.700), rgba(10, 15, 44, 0.700)),
+        url('https://media.istockphoto.com/id/621984692/photo/traffic-security-camera.jpg?s=612x612&w=0&k=20&c=w1TrTBvor2fNfBPxfFpuTm5fShzkuHgRoVVUJcTK1sA=');
+    /* Replace with your image URL or path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
 }
 
+
+
+
 .products-section h2 {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.5rem;
+    font-weight: 700;
     color: var(--navy-blue);
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .products-section p {
-    font-size: 1.1rem;
-    color: var(--navy-blue);
-    max-width: 600px;
+    font-size: 18px;
+    max-width: 800px;
     margin: 0 auto 40px;
-    line-height: 1.6;
+    color: #333;
+
 }
 
 .products-container {
@@ -956,9 +972,10 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 15px var(--shadow-dark);
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
+    flex: 0 1 calc(25% - 30px);
+    /* Ensures 4 per row */
+    min-width: 250px;
+    max-width: 100%;
 }
 
 .product-card:hover {
@@ -973,16 +990,17 @@ body {
 }
 
 .product-card h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: var(--text-light);
     padding: 15px;
 }
 
 .product-card p {
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--text-light);
     padding: 0 15px 20px;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .product-card a {
@@ -1002,7 +1020,15 @@ body {
     color: var(--text-light);
 }
 
-@media (max-width: 768px) {
+/* Responsive layout for tablets and phones */
+@media (max-width: 1024px) {
+    .product-card {
+        flex: 0 1 calc(50% - 30px);
+        /* 2 per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
     .products-section h2 {
         font-size: 2rem;
     }
@@ -1013,9 +1039,14 @@ body {
     }
 
     .product-card {
+        flex: 0 1 100%;
+        /* 1 per row on small screens */
         max-width: 100%;
     }
 }
+
+
+
 
 
 .about-page-hero-section {
@@ -1092,6 +1123,7 @@ body {
     border: 5px solid var(--text-light);
     box-shadow: 0 10px 30px var(--shadow-dark);
 }
+
 /* 
 .about-page-features-section {
     padding: 100px 20px;
@@ -1444,7 +1476,8 @@ body {
 
 /* Unified Surveillance/Smart Home Page Styles */
 .aisurveillance-page,
-.smarthome-page {
+.smarthome-page,
+.access-control-page {
     padding: 60px 20px;
     text-align: center;
     max-width: 1200px;
@@ -1453,13 +1486,15 @@ body {
 }
 
 .aisurveillance-hero,
-.smarthome-hero {
+.smarthome-hero,
+.access-control-hero {
     margin-bottom: 60px;
     background-color: #ffffff;
 }
 
 .aisurveillance-hero h1,
-.smarthome-hero h1 {
+.smarthome-hero h1,
+.access-control-hero h1 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.5rem;
     color: var(--navy-blue);
@@ -1469,7 +1504,8 @@ body {
 }
 
 .aisurveillance-hero p,
-.smarthome-hero p {
+.smarthome-hero p,
+.access-control-hero p {
     font-size: 1.1rem;
     color: var(--navy-blue);
     max-width: 600px;
@@ -1478,14 +1514,16 @@ body {
 }
 
 .aisurveillance-hero i,
-.smarthome-hero i {
+.smarthome-hero i,
+.access-control-hero i {
     color: var(--cyber-blue);
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .aisurveillance-features,
-.smarthome-features {
+.smarthome-features,
+.access-control-features {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1493,7 +1531,8 @@ body {
 }
 
 .aisurveillance-feature-card,
-.smarthome-feature-card {
+.smarthome-feature-card,
+.access-control-feature-card {
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
@@ -1505,27 +1544,31 @@ body {
 }
 
 .aisurveillance-feature-card:hover,
-.smarthome-feature-card:hover {
+.smarthome-feature-card:hover,
+.access-control-feature-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px var(--shadow-dark);
 }
 
 .aisurveillance-feature-card img,
-.smarthome-feature-card img {
+.smarthome-feature-card img,
+.access-control-feature-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
 .aisurveillance-feature-card h3,
-.smarthome-feature-card h3 {
+.smarthome-feature-card h3,
+.access-control-feature-card h3 {
     font-size: 1.5rem;
     color: var(--navy-blue);
     padding: 15px;
 }
 
 .aisurveillance-feature-card p,
-.smarthome-feature-card p {
+.smarthome-feature-card p,
+.access-control-feature-card p {
     font-size: 1rem;
     color: var(--navy-blue);
     padding: 0 15px 20px;
@@ -1534,7 +1577,8 @@ body {
 }
 
 .aisurveillance-feature-card a,
-.smarthome-feature-card a {
+.smarthome-feature-card a,
+.access-control-feature-card a {
     display: inline-block;
     background-color: var(--neon-green);
     color: var(--navy-blue);
@@ -1547,153 +1591,265 @@ body {
 }
 
 .aisurveillance-feature-card a:hover,
-.smarthome-feature-card a:hover {
+.smarthome-feature-card a:hover,
+.access-control-feature-card a:hover {
     background-color: var(--cyber-blue);
     color: var(--text-light);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .aisurveillance-hero h1,
-    .smarthome-hero h1 {
+    .smarthome-hero h1,
+    .access-control-hero h1 {
         font-size: 2rem;
     }
 
     .aisurveillance-features,
-    .smarthome-features {
+    .smarthome-features,
+    .access-control-features {
         flex-direction: column;
         align-items: center;
     }
 
     .aisurveillance-feature-card,
-    .smarthome-feature-card {
+    .smarthome-feature-card,
+    .access-control-feature-card {
         max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+
     .aisurveillance-page,
-    .smarthome-page {
+    .smarthome-page,
+    .access-control-page {
         margin: 60px auto;
         padding: 40px 15px;
     }
-    
+
     .aisurveillance-hero h1,
-    .smarthome-hero h1 {
+    .smarthome-hero h1,
+    .access-control-hero h1 {
         font-size: 1.75rem;
     }
 }
 
-.smarthome-page {
-    padding: 60px 20px;
-    text-align: center;
+/* Hero Section Styling */
+.gateautomation-page-hero {
+    display: flex;
+    justify-content: center;
+    /* Centering the content horizontally */
+    align-items: center;
+    height: 90vh;
+    /* Adjusted height */
+    padding: 0 50px;
+    background: url('../images/BENINCA\ gate.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.alarmsystem-page-hero{
+    display: flex;
+    justify-content: center;
+    /* Centering the content horizontally */
+    align-items: center;
+    height: 90vh;
+    /* Adjusted height */
+    padding: 0 50px;
+    background: url('https://media.istockphoto.com/id/477006248/photo/emergency-buzze.jpg?s=612x612&w=0&k=20&c=M8HgsVHospd2Ks_2sdj1SxaIVMRjaxMNTrhVVlT83IQ=') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Adding a background color overlay */
+.gateautomation-page-hero::before,
+.alarmsystem-page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0f2cbd;
+
+    /* Dark blue color with opacity */
+    z-index: 1;
+}
+
+.gateautomation-page-hero-text,
+.alarmsystem-page-hero-text {
     max-width: 1200px;
-    margin: 100px auto;
-    background-color: #ffffff;
-    /* Explicit white background for main container */
+    /* Set the max-width to 1200px */
+    width: 100%;
+    /* Ensure it uses full width up to 1200px */
+    padding: 20px;
+    z-index: 2;
+    /* Ensures the text is above the overlay */
+    color: white;
+    text-align: center;
+    /* Center the text */
+    margin: 0 auto;
+    /* Centers the text block horizontally */
 }
 
-.smarthome-hero {
-    margin-bottom: 60px;
-    background-color: #ffffff;
-    /* Explicit white background for hero section */
-}
-
-.smarthome-hero h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.5rem;
-    color: var(--navy-blue);
+.gateautomation-page-hero-text h1,
+.alarmsystem-page-hero-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
-.smarthome-hero p {
-    font-size: 1.1rem;
-    color: var(--navy-blue);
-    max-width: 600px;
-    margin: 0 auto 40px;
+.gateautomation-page-hero-text p,
+.alarmsystem-page-hero-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 85%;
+}
+
+/* New Section Styling */
+.gateautomation-page-automation-info,
+.alarmsystem-page-info {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap when needed */
+    justify-content: space-between;
+    /* Distribute items evenly with space between */
+    gap: 20px;
+    padding: 50px;
+}
+
+.gateautomation-page-info-item,
+.alarmsystem-page-info-item {
+    display: flex;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    /* Default width for two items per row */
+}
+
+.gateautomation-page-info-text,
+.alarmsystem-page-info-text {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.gateautomation-page-info-text h2,
+.alarmsystem-page-info-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gateautomation-page-info-text p,
+.alarmsystem-page-info-text p {
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-.smarthome-hero i {
-    color: var(--cyber-blue);
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.smarthome-features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.smarthome-feature-card {
-    background-color: #ffffff;
-    /* White background for feature cards */
-    border-radius: 10px;
+.gateautomation-page-info-image,
+.alarmsystem-page-info-image {
+    max-width: 100%;
     overflow: hidden;
-    box-shadow: 0 4px 15px var(--shadow-dark);
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
+    border-radius: 8px;
+    margin-top: 20px;
+    /* Add spacing between text and image */
 }
 
-.smarthome-feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px var(--shadow-dark);
-}
-
-.smarthome-feature-card img {
+.gateautomation-page-info-image img,
+.alarmsystem-page-info-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-.smarthome-feature-card h3 {
-    font-size: 1.5rem;
-    color: var(--navy-blue);
-    padding: 15px;
+.gateautomation-page-info-image img:hover,
+.alarmsystem-page-info-image img:hover {
+    transform: scale(1.05);
 }
 
-.smarthome-feature-card p {
-    font-size: 1rem;
-    color: var(--navy-blue);
-    padding: 0 15px 20px;
-    margin-bottom: 20px;
-}
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 1024px) {
 
-.smarthome-feature-card a {
-    display: inline-block;
-    background-color: var(--neon-green);
-    color: var(--navy-blue);
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-}
-
-.smarthome-feature-card a:hover {
-    background-color: var(--cyber-blue);
-    color: var(--text-light);
-}
-
-@media (max-width: 768px) {
-    .smarthome-hero h1 {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 2rem;
+    .gateautomation-page-hero,
+    .alarmsystem-page-hero {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
     }
 
-    .smarthome-features {
+    .gateautomation-page-hero-text h1,
+    .alarmsystem-page-hero-text h1 {
+        font-size: 30px;
+    }
+
+    .gateautomation-page-hero-text,
+    .alarmsystem-page-hero-text {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 120px;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
-    .smarthome-feature-card {
-        max-width: 100%;
+    .gateautomation-page-info-item,
+    .alarmsystem-page-info-item {
+        flex-direction: column;
+        /* Stack the text and image vertically */
     }
+
+    /* Adjust grid layout for smaller screens */
+    .gateautomation-page-automation-info,
+    .alarmsystem-page-automation-info {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .gateautomation-page-info-item,
+    .alarmsystem-page-info-item {
+        width: 100%;
+        /* Take full width on smaller screens */
+        margin-bottom: 20px;
+        /* Add space between items */
+    }
+
+    .gateautomation-page-info-text h2,
+    .alarmsystem-page-info-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .gateautomation-page-info-text p,
+    .alarmsystem-page-info-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure images in the info section remain visible */
+    .gateautomation-page-info-image img,
+    .alarmsystem-page-info-image img {
+        display: block;
+    }
+}
+
+.alarmsystem-page-trusted-brands-heading {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 4.5rem 0 1rem 0;
+    text-align: center;
 }
