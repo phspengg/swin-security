@@ -254,7 +254,6 @@
         display: none;
         opacity: 1;
         transform: translateY(0);
-        padding: 0.5rem 0;
     }
 
     .dropdown.active .dropdown-menu {
